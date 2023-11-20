@@ -9,7 +9,6 @@ import com.weather.demo.adapter.web.dto.CurrentWeatherDto;
 import com.weather.demo.adapter.web.dto.WeatherForecastDto;
 import com.weather.demo.application.WeatherService;
 
-//WeatherController.java
 @RestController
 @RequestMapping("/api/weather")
 public class WeatherController {
@@ -33,7 +32,7 @@ public class WeatherController {
      } else {
          return ResponseEntity.badRequest().build();
      }
-
+     
      return ResponseEntity.ok(currentWeather);
  }
 
@@ -49,8 +48,7 @@ public class WeatherController {
      } else {
          return ResponseEntity.badRequest().build();
      }
-
+     
      return ResponseEntity.ok(forecast);
  }
- 
 }
