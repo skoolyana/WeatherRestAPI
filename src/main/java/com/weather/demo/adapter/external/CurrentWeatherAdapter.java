@@ -1,7 +1,6 @@
 package com.weather.demo.adapter.external;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
@@ -18,19 +17,19 @@ public class CurrentWeatherAdapter implements CurrentWeatherPort {
 	private final RestTemplate restTemplate;
     private final String weatherApiKey;
     private final String weatherApiUrl;
-    private final String geolocationApiKey; // Add this line
-    private final String geolocationApiUrl; // Add this line
+    private final String geolocationApiKey; 
+    private final String geolocationApiUrl;
 
     public CurrentWeatherAdapter(RestTemplate restTemplate,
                                 @Value("${openweathermap.api.key}") String weatherApiKey,
                                 @Value("${openweathermap.api.url}") String weatherApiUrl,
-                                @Value("${geolocation.api.key}") String geolocationApiKey, // Add this line
-                                @Value("${geolocation.api.url}") String geolocationApiUrl) { // Add this line
+                                @Value("${geolocation.api.key}") String geolocationApiKey, 
+                                @Value("${geolocation.api.url}") String geolocationApiUrl) { 
         this.restTemplate = restTemplate;
         this.weatherApiKey = weatherApiKey;
         this.weatherApiUrl = weatherApiUrl;
-        this.geolocationApiKey = geolocationApiKey; // Add this line
-        this.geolocationApiUrl = geolocationApiUrl; // Add this line
+        this.geolocationApiKey = geolocationApiKey; 
+        this.geolocationApiUrl = geolocationApiUrl; 
     }
 
 
